@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ismayilovparfume</title>
+<style>
+  /* ===== Arxa fon ===== */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #000428, #004e92);
+    color: white;
+    overflow-x: hidden;
+  }
+  /* Pələng arxa fon */
+  #background-tiger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/13.jpg') no-repeat center center/cover;
+    opacity: 0.2;
+    z-index: -1;
+  }
+
+  header {
+    text-align: center;
+    padding: 50px 20px 20px 20px;
+  }
+  header h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+  }
+  /* Ətir şəkilləri container */
+  #perfumes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease-in-out;
+  }
+  #perfumes.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .perfume {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+  .perfume img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .perfume:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00f;
+  }
+  .discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 0.9em;
+    box-shadow: 0 0 10px #000;
+  }
+
+  /* Əlaqə bölməsi */
+  #contact {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  #contact button {
+    background: #00f;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  #contact button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #fff;
+  }
+
+</style>
+</head>
+<body>
+
+<div id="background-tiger"></div>
+
+<header>
+  <h1>ismayilovparfume</h1>
+  <p style="font-size:1.2em; margin-top:10px; color: #00f;">Bütün ətirlərdə <strong>30% endirim</strong>!</p>
+</header>
+
+<div id="perfumes">
+  <div class="perfume"><img src="perfumes/1.jpg" alt="Perfume 1"><div class="discount">30% endirim</div></div>
+  <div class="perfume"><img src="perfumes/2.jpg" alt="Perfume 2"><div class="discount">30% endirim</div></div>
+  <div class="perfume"><img src="perfumes/3.jpg" alt="Perfume 3"><div class="discount">30% endirim</div></div>
+  <div class="perfume"><img src="perfumes/4.jpg" alt="Perfume 4"><div class="discount">30% endirim</div></div>
+  <div class="perfume"><img src="perfumes/5.jpg" alt="Perfume 5"><div class="discount">30% endirim</div></div>
+  <div class="perfume"><img src="perfumes/6.jpg" alt="Perfume 6"><div class="discount">30% endirim</div></div>
+  <div class="perfume"><img src="perfumes/7.jpg" alt="Perfume 7"><div class="discount">30% endirim</div></div>
+  <div class="perfume"><img src="perfumes/8.jpg" alt="Perfume 8"><div class="discount">30% endirim</div></div>
+  <div class="perfume"><img src="perfumes/9.jpg" alt="Perfume 9"><div class="discount">30% endirim</div></div>
+  <div class="perfume"><img src="perfumes/10.jpg" alt="Perfume 10"><div class="discount">30% endirim</div></div>
+  <div class="perfume"><img src="perfumes/11.jpg" alt="Perfume 11"><div class="discount">30% endirim</div></div>
+  <div class="perfume"><img src="perfumes/12.jpg" alt="Perfume 12"><div class="discount">30% endirim</div></div>
+  <div class="perfume"><img src="perfumes/14.jpg" alt="Perfume 14"><div class="discount">30% endirim</div></div>
+  <div class="perfume"><img src="perfumes/15.jpg" alt="Perfume 15"><div class="discount">30% endirim</div></div>
+</div>
+
+<section id="contact">
+  <button onclick="openWhatsApp()">Əlaqə qur & Sifariş et</button>
+</section>
+
+<script>
+  // Animasiya start
+  window.addEventListener('load', () => {
+    document.getElementById('perfumes').classList.add('show');
+  });
+
+  // WhatsApp link
+  function openWhatsApp() {
+    window.open('https://wa.me/994515119207', '_blank');
+  }
+</script>
+
+</body>
+</html>
